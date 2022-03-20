@@ -1,16 +1,22 @@
 export class Interface {
   constructor() {
+    this.generateTitle();
+
     this.table = this.generateHash();
 
     return this.table;
   }
 
-  generateHash() {
+  generateTitle() {
     const root = document.querySelector("div.root");
 
     const title = document.createElement("h1");
     title.textContent = "Tic-Tae-Toe";
     root.appendChild(title);
+  }
+
+  generateHash() {
+    const root = document.querySelector("div.root");
 
     const table = document.createElement("table");
     root.appendChild(table);
